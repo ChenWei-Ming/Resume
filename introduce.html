@@ -9,17 +9,41 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
-      @media (max-width: 640px) {
-        .text-4xl {
-          font-size: 1.875rem;
-        }
-        .text-2xl {
-          font-size: 1.5rem;
-        }
-        .text-xl {
-          font-size: 1.25rem;
-        }
-      }
+    @media (max-width: 640px) {
+  .container {
+    padding: 4px;
+  }
+  
+  header {
+    padding: 4px;
+  }
+  
+  header img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .text-4xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+  
+  .text-xl {
+    font-size: 1rem;
+  }
+  
+  section {
+    padding: 12px;
+  }
+  
+  .skill-item {
+    padding: 4px;
+    font-size: 0.875rem;
+  }
+}
       body {
         background-color: #f0f4f8;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
@@ -87,7 +111,7 @@
       }
 
       /* 在移动设备上隐藏垂直导航 */
-      @media (max-width: 768px) {
+      @media (max-width: 1200px) {
         #vertical-nav {
           display: none;
         }
@@ -169,7 +193,7 @@
             id="training-title"
             class="text-2xl font-semibold mb-4 text-indigo-700"
           >
-            資展國際的專業訓練歷
+            資展國際的職前訓練
           </h2>
           <p>
             為了轉換跑道，我最近半年在資展國際學習網頁開發技術。培訓課程涵蓋了前端和後端技術，包括HTML、CSS、JavaScript、React.js、Node.js等。透過課堂上的學習和專題的製作，我不僅掌握了全端開發的技術知識，還深入了解了網站架構和API設計的原理。這段經歷培養了我成為一名前端開發工程師的基礎能力。
