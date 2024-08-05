@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>陳維明 - 個人介紹</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      @media (max-width: 640px) {
+        .text-4xl {
+          font-size: 1.875rem;
+        }
+        .text-2xl {
+          font-size: 1.5rem;
+        }
+        .text-xl {
+          font-size: 1.25rem;
+        }
+      }
+      body {
+        background-color: #f0f4f8;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+      }
+
+      #progress-nav {
+        position: fixed;
+        top: 50%;
+        right: 30px;
+        transform: translateY(-50%);
+      }
+      #progress-nav a {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgba(79, 70, 229, 0.5);
+        margin: 10px 0;
+        transition: all 0.3s;
+      }
+      #progress-nav a.active {
+        background-color: rgba(79, 70, 229, 1);
+        transform: scale(1.5);
+      }
+      #go-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        display: none;
+        padding: 10px;
+        background-color: rgba(79, 70, 229, 0.8);
+        color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: opacity 0.3s, transform 0.3s;
+      }
+      #go-to-top:hover {
+        transform: translateY(-3px);
+      }
+      #vertical-nav {
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        background-color: rgba(240, 244, 248, 0.8);
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000;
+      }
+      #vertical-nav a {
+        display: block;
+        color: #4f46e5;
+        text-decoration: none;
+        margin: 10px 0;
+        font-size: 14px;
+        transition: all 0.3s;
+      }
+      #vertical-nav a:hover {
+        transform: translateX(-5px);
+        color: #3730a3;
+      }
+      #vertical-nav a::before {
+        content: "•";
+        margin-right: 5px;
+      }
+
+      /* 在移动设备上隐藏垂直导航 */
+      @media (max-width: 768px) {
+        #vertical-nav {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="text-gray-800">
+    <nav id="vertical-nav" aria-labelledby="navbarDropdown">
+      <a href="#" id="nav-top">Top</a>
+      <a href="#intro">About</a>
+      <a href="#education">Education</a>
+      <a href="#training">Training</a>
+      <a href="#future">Future</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+      <header
+        id="header"
+        class="text-center mb-12 bg-white bg-opacity-80 rounded-lg shadow-md p-8"
+        data-aos="flip-up"
+        data-aos-duration="1000"
+      >
+        <img
+          src="./1080155.jpg"
+          alt="陳維明的個人照片"
+          class="rounded-full mx-auto mb-6 border-4 border-indigo-500 w-40 h-40 object-cover"
+        />
+        <h1 class="text-4xl font-bold text-indigo-700 mb-2">陳維明</h1>
+        <p class="text-xl text-indigo-600">前端工程師</p>
+      </header>
+
+      <main class="space-y-8">
+        <section
+          id="intro"
+          class="bg-white bg-opacity-80 rounded-lg shadow-md p-8"
+          aria-labelledby="intro-title"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <h2
+            id="intro-title"
+            class="text-2xl font-semibold mb-4 text-indigo-700"
+          >
+            個人簡介
+          </h2>
+          <p>
+            我是陳維明，1997年生於台南市。擁有會計背景，現正轉職成為一名前端工程師。
+          </p>
+        </section>
+
+        <section
+          id="education"
+          class="bg-white bg-opacity-80 rounded-lg shadow-md p-8"
+          aria-labelledby="education-title"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <h2
+            id="education-title"
+            class="text-2xl font-semibold mb-4 text-indigo-700"
+          >
+            求學及工作歷程
+          </h2>
+          <p>
+            畢業於國立台北大學會計學系，在校期間深入學習會計專業知識。畢業後，第一份在南紡購物中心擔任會計副專員，負責總帳及樓層會計；第二份工作在正鉑雷射獨立處理會計帳務。這些經歷培養了我處理會計事務的能力，也讓我深刻體會到，會計工作需要極大的耐心和細心。
+          </p>
+        </section>
+
+        <section
+          id="training"
+          class="bg-white bg-opacity-80 rounded-lg shadow-md p-8"
+          aria-labelledby="training-title"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <h2
+            id="training-title"
+            class="text-2xl font-semibold mb-4 text-indigo-700"
+          >
+            資展國際的專業訓練歷
+          </h2>
+          <p>
+            為了轉換跑道，我最近半年在資展國際學習網頁開發技術。培訓課程涵蓋了前端和後端技術，包括HTML、CSS、JavaScript、React.js、Node.js等。透過課堂上的學習和專題的製作，我不僅掌握了全端開發的技術知識，還深入了解了網站架構和API設計的原理。這段經歷培養了我成為一名前端開發工程師的基礎能力。
+          </p>
+        </section>
+
+        <section
+          id="future"
+          class="bg-white bg-opacity-80 rounded-lg shadow-md p-8"
+          aria-labelledby="future-title"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <h2
+            id="future-title"
+            class="text-2xl font-semibold mb-4 text-indigo-700"
+          >
+            未來工作期許
+          </h2>
+          <p>
+            我希望能夠在前端開發領域發展，將會計工作中培養的細心和耐心，結合新學到的網頁技能，為團隊帶來獨特的價值。我期待在一個鼓勵創新、重視團隊合作的環境中工作，不斷學習新技術，提升自己的專業能力，同時為公司的發展貢獻自己的力量。
+          </p>
+        </section>
+
+        <section
+          id="skills-section"
+          class="bg-white bg-opacity-80 rounded-lg shadow-md p-8"
+          aria-labelledby="skills"
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+        >
+          <h2 id="skills" class="text-2xl font-semibold mb-4 text-indigo-700">
+            技能
+          </h2>
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-semibold mb-2 text-indigo-600">
+                前端技能
+              </h3>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div
+                  class="skill-item p-2 bg-indigo-100 rounded text-center cursor-pointer hover:bg-indigo-200 transition-colors"
+                  tabindex="0"
+                  data-aos="zoom-in"
+                  data-aos-delay="100"
+                >
+                  HTML
+                </div>
+                <div
+                  class="skill-item p-2 bg-indigo-100 rounded text-center cursor-pointer hover:bg-indigo-200 transition-colors"
+                  tabindex="0"
+                  data-aos="zoom-in"
+                  data-aos-delay="200"
+                >
+                  CSS
+                </div>
+                <div
+                  class="skill-item p-2 bg-indigo-100 rounded text-center cursor-pointer hover:bg-indigo-200 transition-colors"
+                  tabindex="0"
+                  data-aos="zoom-in"
+                  data-aos-delay="300"
+                >
+                  Bootstrap5
+                </div>
+                <div
+                  class="skill-item p-2 bg-indigo-100 rounded text-center cursor-pointer hover:bg-indigo-200 transition-colors"
+                  tabindex="0"
+                  data-aos="zoom-in"
+                  data-aos-delay="400"
+                >
+                  Javascript
+                </div>
+                <div
+                  class="skill-item p-2 bg-indigo-100 rounded text-center cursor-pointer hover:bg-indigo-200 transition-colors"
+                  tabindex="0"
+                  data-aos="zoom-in"
+                  data-aos-delay="500"
+                >
+                  jQuery
+                </div>
+                <div
+                  class="skill-item p-2 bg-indigo-100 rounded text-center cursor-pointer hover:bg-indigo-200 transition-colors"
+                  tabindex="0"
+                  data-aos="zoom-in"
+                  data-aos-delay="600"
+                >
+                  React.js
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2 text-indigo-600">
+                後端技能
+              </h3>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div
+                  class="skill-item p-2 bg-indigo-100 rounded text-center cursor-pointer hover:bg-indigo-200 transition-colors"
+                  tabindex="0"
+                  data-aos="zoom-in"
+                  data-aos-delay="700"
+                >
+                  PHP
+                </div>
+                <div
+                  class="skill-item p-2 bg-indigo-100 rounded text-center cursor-pointer hover:bg-indigo-200 transition-colors"
+                  tabindex="0"
+                  data-aos="zoom-in"
+                  data-aos-delay="800"
+                >
+                  Node.js
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2 text-indigo-600">
+                資料庫技能
+              </h3>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div
+                  class="skill-item p-2 bg-indigo-100 rounded text-center cursor-pointer hover:bg-indigo-200 transition-colors"
+                  tabindex="0"
+                  data-aos="zoom-in"
+                  data-aos-delay="1000"
+                >
+                  MySQL
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2 text-indigo-600">
+                整合技能
+              </h3>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div
+                  class="skill-item p-2 bg-indigo-100 rounded text-center cursor-pointer hover:bg-indigo-200 transition-colors"
+                  tabindex="0"
+                  data-aos="zoom-in"
+                  data-aos-delay="1200"
+                >
+                  RESTful API
+                </div>
+                <div
+                  class="skill-item p-2 bg-indigo-100 rounded text-center cursor-pointer hover:bg-indigo-200 transition-colors"
+                  tabindex="0"
+                  data-aos="zoom-in"
+                  data-aos-delay="1300"
+                >
+                  前後端串接
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6">
+            <h3 class="text-xl font-semibold mb-2 text-indigo-600">
+              TOEIC成績
+            </h3>
+            <div class="bg-gray-200 rounded-full h-6 dark:bg-gray-700">
+              <div
+                class="bg-indigo-600 h-6 rounded-full"
+                style="width: 85%"
+              ></div>
+            </div>
+            <p class="mt-2 text-indigo-600 font-semibold">850 / 990 (2015年)</p>
+          </div>
+        </section>
+
+        <section
+          class="bg-white bg-opacity-80 rounded-lg shadow-md p-8"
+          aria-labelledby="contact"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <h2 id="contact" class="text-2xl font-semibold mb-4 text-indigo-700">
+            聯絡方式
+          </h2>
+          <ul class="space-y-2">
+            <li class="flex flex-col sm:flex-row">
+              <span class="inline-block w-20 font-semibold mb-1 sm:mb-0"
+                >Email:</span
+              >
+              <a
+                href=""
+                class="text-indigo-600 hover:text-indigo-800 break-all"
+              >
+              willybearwei@gmail.com
+              </a>
+            </li>
+            <li class="flex flex-col sm:flex-row">
+              <span class="inline-block w-20 font-semibold mb-1 sm:mb-0"
+                >GitHub:</span
+              >
+              <a
+                href="https://github.com/ChenWei-Ming"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-indigo-600 hover:text-indigo-800 break-all"
+              >
+                github.com/ChenWei-Ming
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // 初始化 AOS
+        AOS.init({
+          duration: 1000,
+          once: false,
+          mirror: true,
+        });
+
+        // 点击导航链接滚动到对应部分
+        $("#vertical-nav a").click(function (e) {
+          e.preventDefault();
+          const targetId = $(this).attr("href");
+          if (targetId === "#") {
+            $("html, body").animate({ scrollTop: 0 }, 1000);
+          } else {
+            $("html, body").animate(
+              {
+                scrollTop: $(targetId).offset().top,
+              },
+              1000
+            );
+          }
+        });
+
+        // 滚动时刷新 AOS
+        $(window).scroll(function () {
+          AOS.refresh();
+          updateProgress();
+        });
+
+        // 更新进度导航
+        function updateProgress() {
+          const scrollPosition = $(window).scrollTop();
+          const windowHeight = $(window).height();
+          const documentHeight = $(document).height();
+
+          $("section").each(function () {
+            const target = $(this);
+            const targetTop = target.offset().top;
+            const targetHeight = target.outerHeight();
+
+            if (
+              scrollPosition >= targetTop - windowHeight / 2 &&
+              scrollPosition < targetTop + targetHeight - windowHeight / 2
+            ) {
+              $("#vertical-nav a").removeClass("font-bold");
+              $(`#vertical-nav a[href="#${target.attr("id")}"]`).addClass(
+                "font-bold"
+              );
+            }
+          });
+        }
+
+        // 技能项目点击效果
+        $(".skill-item").on("click keypress", function (e) {
+          if (e.type === "click" || (e.type === "keypress" && e.which === 13)) {
+            $(this).toggleClass("font-bold bg-indigo-300");
+          }
+        });
+
+        // 初始更新
+        updateProgress();
+      });
+    </script>
+  </body>
+</html>
